@@ -1,1 +1,1 @@
-# CLIP2Scene
+# CLIP2Scene (CVPR2023)
