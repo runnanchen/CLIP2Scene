@@ -1,0 +1,83 @@
+# "nuscenes" or "kitti"
+dataset : "scannet"
+mode: 'pretrain'
+#mode: 'source_free'
+working_dir : "output/clip2scene/scannet/"
+# if set to True, use cylindrical coordinates, otherwise use cartesian
+cylindrical_coordinates : False
+# size of the voxel in each dimension for cartesian coordinates,
+# and in rho and z for cylindrical (angular is always 1°)
+voxel_size : 0.05
+batch_size : 8
+# learning rate
+lr : 0.1
+sgd_momentum : 0.9
+sgd_dampening : 0.1
+weight_decay : 0.0001
+num_epochs : 30
+# used in superpixel loss only, drop points and pixels from the computation of the loss
+dropout : 0.
+# number of GPUs and CPU threads to use
+num_gpus : 2
+num_threads : 16
+kernel_size : 3
+model_n_out : 512
+bn_momentum : 0.05
+crop_size : [224, 416]
+crop_ratio : [1.5555555555555556, 1.8888888888888888]
+# point cloud backbone to use among "minkunet" and "voxelnet"
+model_points : "minkunet"
+# which image pretraining to chose among:
+# 'imagenet','obow', 'pixpro', 'moco_v1', 'moco_v2', 'swav',
+# 'deepcluster_v2', 'dino', 'moco_coco'
+image_weights : "moco_v2"
+#image_weights : None
+# which image encoder to use (only imagenet is available with resnet18)
+#images_encoder : "resnet50"
+images_encoder : "maskclip"
+# which image decoder to use
+# 'bilinear', 'unet', 'fpn', 'semseg', 'nnfe', 'dilation', 'ppkt'
+decoder : "dilation"
+# temperature parameter in the InfoNCE loss
+NCE_temperature : 0.07
+# number of positive matches in the InfoNCE loss
+num_matches : 4096
+# whether to use the true validation set or the custom parametrization set
+training : "training"
+# transformations to apply to the clouds
+transforms_clouds : ["Rotation", "FlipAxis"]
+# transformations to apply to both the clouds and the images among:
+transforms_mixed : ["ResizedCrop", "FlipHorizontal"]
+# which losses to use (note that multiple losses will be summed)
+losses : ["scannet_loss"]
+
+dataRoot_scannet: "/userhome/cs/crnsmile/dataset/scannet/scans"
+train_file: "/userhome/cs/crnsmile/project/CLIP2Scene/splits/scannet/scannetv2_train.txt"
+val_file: "/userhome/cs/crnsmile/project/CLIP2Scene/splits/scannet/scannetv2_val.txt"
+dataRoot_images: "/userhome/cs/crnsmile/dataset/scannet/images/tasks/scannet_frames_25k"
+
+# which kind of superpixels to use
+superpixels_type : "slic"
+# only keep 1 in dataset_skip_step training examples (here use 100% of the data)
+dataset_skip_step : 1
+# path to weights to continue a previous training
+resume_path : Null
+
+max_sweeps: 1
+
+text_categories: 20
+text_embeddings_path: '/userhome/cs/crnsmile/project/MaskCLIP/pretrain/scannet_ViT16_clip_text.pth'
+
+#text_categories: 19
+#text_embeddings_path: '/mnt/lustre/chenrunnan/projects/MaskCLIP/pretrain/city_ViT16_clip_text.pth'
+
+#text_categories: 24
+#text_embeddings_path: '/mnt/lustre/chenrunnan/projects/MaskCLIP/pretrain/nuscenes_and_kitti_ViT16_clip_text.pth'
+
+maskclip_checkpoint: '/userhome/cs/crnsmile/project/MaskCLIP/pretrain/ViT16_clip_backbone.pth'
+visual_projs_path: '/userhome/cs/crnsmile/project/MaskCLIP/pretrain/ViT16_clip_weights.pth'
+
+# WARNING: DO NOT CHANGE THE FOLLOWING PARAMETERS
+# ===============================================
+normalize_features : False
+superpixel_size : 150

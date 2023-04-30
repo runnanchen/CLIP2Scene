@@ -1,0 +1,8 @@
+scene0191_00.ply
+scene0191_01.ply
+scene0191_02.ply
+scene0119_00.ply
+scene0230_00.ply
+scene0528_00.ply
+scene0528_01.ply
+scene0705_00.ply
