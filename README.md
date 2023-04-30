@@ -13,7 +13,7 @@ semantic segmentation and significantly outperforms other self-supervised method
 conda install pytorch==1.10.0 torchvision==0.11.0 cudatoolkit=11.3 -c pytorch -c conda-forge
 ```
 
-**Step 2.** Install Torchsparse and [MinkowskiEngine](https://github.com/NVIDIA/MinkowskiEngine).
+**Step 2.** Install [Torchsparse](https://github.com/mit-han-lab/torchsparse) and [MinkowskiEngine](https://github.com/NVIDIA/MinkowskiEngine).
 ```shell
 # MinkowskiEngine
 conda install openblas-devel -c anaconda
