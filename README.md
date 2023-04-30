@@ -105,14 +105,9 @@ python pretrain.py --cfg_file config/clip2scene_nuscenes.yaml
 
 
 # Citation
-If you use MaskCLIP or this code base in your work, please cite
+If you use CLIP2Scene or this code base in your work, please cite
 ```
-@InProceedings{zhou2022maskclip,
-    author = {Zhou, Chong and Loy, Chen Change and Dai, Bo},
-    title = {Extract Free Dense Labels from CLIP},
-    booktitle = {European Conference on Computer Vision (ECCV)},
-    year = {2022}
-}
+
 ```
 
 Ackkownled
