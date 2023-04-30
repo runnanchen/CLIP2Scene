@@ -4,7 +4,7 @@
 CLIP2Scene leverages CLIP knowledge to pre-train a 3D point cloud segmentation network via semantic and spatial-temporal consistency regularization. It yields impressive performance on annotation-free 3D
 semantic segmentation and significantly outperforms other self-supervised methods when fine-tuning on annotated data.
 
-[[CVPR 2023 Paper]](https://arxiv.org/pdf/2104.11225.pdf) 
+[[CVPR 2023 Paper]](https://arxiv.org/pdf/2301.04926.pdf) 
 
 # Installation
 **Step 1.** Install PyTorch and Torchvision following [official instructions](https://pytorch.org/get-started/locally/),
