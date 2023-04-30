@@ -106,11 +106,11 @@ python pretrain.py --cfg_file config/clip2scene_nuscenes_pretrain.yaml
 
 **ScanNet.** 
 ```shell
-python pretrain.py --cfg_file config/clip2scene_scannet_label_free.yaml --pretraining_path output/clip2scene/scannet/{date}/model.pt
+python downstream.py --cfg_file config/clip2scene_scannet_label_free.yaml --pretraining_path output/clip2scene/scannet/{date}/model.pt
 ```
 **NuScenes.** 
 ```shell
-python pretrain.py --cfg_file config/clip2scene_nuscenes_label_free.yaml --pretraining_path output/clip2scene/nuscenes/{date}/model.pt
+python downstream.py --cfg_file config/clip2scene_nuscenes_label_free.yaml --pretraining_path output/clip2scene/nuscenes/{date}/model.pt
 ```
 
 
@@ -118,17 +118,17 @@ python pretrain.py --cfg_file config/clip2scene_nuscenes_label_free.yaml --pretr
 
 **ScanNet.** 
 ```shell
-python pretrain.py --cfg_file config/clip2scene_scannet_finetune.yaml --pretraining_path output/clip2scene/scannet/{date}/model.pt
+python downstream.py --cfg_file config/clip2scene_scannet_finetune.yaml --pretraining_path output/clip2scene/scannet/{date}/model.pt
 # The pre-trained model will be saved in /output/downstream/scannet/{date}/model.pt
 ```
 **NuScenes.** 
 ```shell
-python pretrain.py --cfg_file config/clip2scene_nuscenes_finetune.yaml --pretraining_path output/clip2scene/nuscenes/{date}/model.pt
+python downstream.py --cfg_file config/clip2scene_nuscenes_finetune.yaml --pretraining_path output/clip2scene/nuscenes/{date}/model.pt
 # The pre-trained model will be saved in /output/downstream/nuscenes/{date}/model.pt
 ```
 **SemanticKITTI.** 
 ```shell
-python pretrain.py --cfg_file config/clip2scene_kitti_finetune.yaml --pretraining_path output/clip2scene/nuscenes/{date}/model.pt
+python downstream.py --cfg_file config/clip2scene_kitti_finetune.yaml --pretraining_path output/clip2scene/nuscenes/{date}/model.pt
 # The pre-trained model will be saved in /output/downstream/kitti/{date}/model.pt
 ```
 
