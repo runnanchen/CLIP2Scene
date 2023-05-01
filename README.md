@@ -133,7 +133,7 @@ python downstream.py --cfg_file config/clip2scene_kitti_finetune.yaml --pretrain
 ```
 
 # Citation
-If you use MaskCLIP or this code base in your work, please cite
+If you use CLIP2Scene in your work, please cite
 ```
 @article{chen2023clip2scene,
   title={CLIP2Scene: Towards Label-efficient 3D Scene Understanding by CLIP},
