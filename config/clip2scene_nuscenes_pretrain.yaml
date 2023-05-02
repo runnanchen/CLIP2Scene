@@ -76,3 +76,4 @@ visual_projs_path: '/nvme/konglingdong/runnan/CLIP2Scene/ViT16_clip_weights.pth'
 # WARNING: DO NOT CHANGE THE FOLLOWING PARAMETERS
 # ===============================================
 normalize_features : True
+superpixel_size: 150
