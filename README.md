@@ -83,13 +83,13 @@ python -m pcdet.datasets.nuscenes.nuscenes_dataset --func create_nuscenes_infos 
 ```shell
 python utils/convert_clip_weights.py --model ViT16 --backbone
 python utils/convert_clip_weights.py --model ViT16
+# obtain ViT16_clip_backbone.pth and ViT16_clip_weights.pth
 ```
 
 **Step 3.** Prepare the CLIP's text embeddings of the scannet and nuscenes datasets,
 ```shell
 python utils/prompt_engineering.py --model ViT16 --class-set nuscenes
 python utils/prompt_engineering.py --model ViT16 --class-set scannet
-# obtain ViT16_clip_backbone.pth and ViT16_clip_weights.pth
 ```
 
 # Pre-training
