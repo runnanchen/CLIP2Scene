@@ -71,8 +71,8 @@ In this paper, we conduct experiments on [ScanNet](http://www.scan-net.org), [Nu
 ```shell
 # Pre-processing the scannet dataset
 python utils/preprocess_scannet.py
-# Obtain nuScenes's sweeps information in (https://github.com/open-mmlab/OpenPCDet/blob/master/docs/GETTING_STARTED.md), 
-and save as "nuscenes_infos_dict_10sweeps_train.pkl"
+# Obtain nuScenes's sweeps information in (https://github.com/open-mmlab/OpenPCDet/blob/master/docs/GETTING_STARTED.md), and
+# save as "nuscenes_infos_dict_10sweeps_train.pkl"
 python -m pcdet.datasets.nuscenes.nuscenes_dataset --func create_nuscenes_infos \
     --cfg_file tools/cfgs/dataset_configs/nuscenes_dataset.yaml \
     --version v1.0-trainva
@@ -87,9 +87,9 @@ python utils/convert_clip_weights.py --model ViT16
 
 **Step 3.** Prepare the CLIP's text embeddings of the scannet and nuscenes datasets,
 ```shell
-# obtain ViT16_clip_backbone.pth and ViT16_clip_weights.pth
 python utils/prompt_engineering.py --model ViT16 --class-set nuscenes
 python utils/prompt_engineering.py --model ViT16 --class-set scannet
+# obtain ViT16_clip_backbone.pth and ViT16_clip_weights.pth
 ```
 
 # Pre-training
