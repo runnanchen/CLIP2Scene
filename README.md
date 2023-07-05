@@ -138,10 +138,11 @@ python downstream.py --cfg_file config/clip2scene_kitti_finetune.yaml --pretrain
 # Citation
 If you use CLIP2Scene in your work, please cite
 ```
-@article{chen2023clip2scene,
+@inproceedings{chen2023clip2scene,
   title={CLIP2Scene: Towards Label-efficient 3D Scene Understanding by CLIP},
   author={Chen, Runnan and Liu, Youquan and Kong, Lingdong and Zhu, Xinge and Ma, Yuexin and Li, Yikang and Hou, Yuenan and Qiao, Yu and Wang, Wenping},
-  journal={arXiv preprint arXiv:2301.04926},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={7020--7030},
   year={2023}
 }
 ```
